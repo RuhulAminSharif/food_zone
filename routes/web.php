@@ -14,4 +14,4 @@ require __DIR__ . '/settings.php';
 Route::get(
     "admin/dashboard",
     [AdminDashboardController::class, 'index']
-)->middleware("auth")->name("admin.dashboard");
+)->middleware("auth", "role:admin")->name("admin.dashboard");
